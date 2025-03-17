@@ -14,6 +14,9 @@ public class CollectorsExercisesSolution {
 
     public static void main(String[] args) {
         Stream<Videogame> videogames = Database.videogames.stream();
+        
+//      getReviews(videogames).forEach(System.out::println);
+//      getWebSites(videogames).forEach((k, v) -> System.out.println(k + " - " + v.size()));        
         getConsolesPricesAvg(videogames).forEach((k, v) -> System.out.println(k + " - " + v));
     }
 

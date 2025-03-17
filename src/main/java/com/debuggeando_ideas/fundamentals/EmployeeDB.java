@@ -7,11 +7,11 @@ public class EmployeeDB implements  DatabaseService<Employee>
 {
     @Override
     public Employee getById(Long id) {
-        Employee e = new Employee();
-        e.setDni(UUID.randomUUID().toString());
-        e.setName("Pedro");
-        e.setSalary(10000.0);
-        return e;
+        return Employee.builder()
+    		.dni(UUID.randomUUID().toString())
+    		.name("Pedro")
+    		.salary(10000.0)
+    		.build();
     }
 
     @Override
